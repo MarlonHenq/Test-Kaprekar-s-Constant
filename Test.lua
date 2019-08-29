@@ -21,9 +21,13 @@ function toSeparated(separated, condicion)
 	var1 = number1 - number10 * 10
 
 	if tonumber(condicion) == 0 then
-		verification()
+		addNumber()
 	else
-		crescentAndDescending()
+		if tonumber(condicion) == 1 then
+			crescentAndDescending()
+		elseif tonumber(condicion) == 2 then
+			verification()
+		end
 	end
 end
 
@@ -82,15 +86,15 @@ function crescentAndDescending()
 	end
 end
 
-function ifRepeatedNumbers()
+function verification()
 	if var1 == var2 then
-		verification()
+		addNumber()
 	else
 		if var1 == var3 then
-			verification()
+			addNumber()
 		else
 			if var2 == var3 then
-				verification()
+				addNumber()
 			else
 				print("calculating from: " .. tostring(start) .. "...")
 				crescentAndDescending()
@@ -99,47 +103,19 @@ function ifRepeatedNumbers()
 	end
 end
 
-function verification()
+function addNumber()
 	totalCalculation = 0
-	var1 = var1 + 1
+	start = start + 1
+	number = start
 
-	if tonumber(var1) < 10 then
-		if tonumber(var2) < 10 then
-			if tonumber(var3) < 10 then
-				start = var3 .. var2 .. var1
-				ifRepeatedNumbers()
-			else
-				print("Program closed! Total Numers: " .. tostring(totalNumbers))
-				turnOff = io.read()
-			end
-		else
-			var2 = 0
-			var3 = var3 + 1
-
-			start = var3 .. var2 .. var1
-			ifRepeatedNumbers()
-		end
+	if tonumber(number) < 1000 then
+		toSeparated(number, 2)
 	else
-		var1 = 0
-		var2 = var2 + 1
-
-				if tonumber(var2) < 10 then
-			if tonumber(var3) < 10 then
-				start = var3 .. var2 .. var1
-				ifRepeatedNumbers()
-			else
-				print("Program closed! Total Numers: " .. tostring(totalNumbers))
-				turnOff = io.read()
-			end
-		else
-			var2 = 0
-			var3 = var3 + 1
-
-			start = var3 .. var2 .. var1
-			ifRepeatedNumbers()
-		end
+		print("Program closed! Total Numers: " .. tostring(totalNumbers))
+		turnOff = io.read()
 	end
+
 
 end
 
-verification()
+addNumber()
