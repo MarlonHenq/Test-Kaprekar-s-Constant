@@ -112,6 +112,7 @@ function addNumber()
 		toSeparated(number, 2)
 	else
 		print("Program closed! Total Numers: " .. tostring(totalNumbers))
+		print("Enter to exit")
 		turnOff = io.read()
 	end
 
