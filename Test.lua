@@ -106,6 +106,13 @@ end
 function addNumber()
 	totalCalculation = 0
 	start = start + 1
+
+	if start < 10 then
+		start = 0 .. 0 .. start
+	elseif start < 100 then
+		start = 0 .. start
+	end
+
 	number = start
 
 	if tonumber(number) < 1000 then
