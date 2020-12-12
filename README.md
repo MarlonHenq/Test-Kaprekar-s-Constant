@@ -5,7 +5,7 @@ This code was made to test the Kaprekar's constant of 3 numbers in brute force o
 ## What is the Kaprekar's Constant?
 https://en.wikipedia.org/wiki/6174_(number)
 
-## How calculate the Kaprekar's Constant?
+## How calculate the Kaprekar's Constant? (3 numbers)
 http://www.math.info/Misc/Kaprekar_Constant_495/
 
 ## How to run the file?
